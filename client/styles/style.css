@@ -11,6 +11,18 @@ ng-map {
     width: 100%;
 }
 
+.bar {
+  fill: #DC143C;
+}
+
+.bar:hover {
+  fill: brown;
+}
+
+.axis--x path {
+  display: none;
+}
+
 .container {
   text-align: center;
   background-image: url('../images/background-map.jpg');
@@ -331,21 +343,4 @@ hr{
      width: 30%;
    margin: 0 auto;
 }
-svg {
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
 
-.axis path,
-.axis line {
-    fill: none;
-    stroke: #000;
-    shape-rendering: crispEdges;
-}
-
-.axis text{
-    font: Times;
-    font-size: 12px;
-    font-weight: bold;
-}

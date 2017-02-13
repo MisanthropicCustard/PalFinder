@@ -3,28 +3,28 @@
       <button id="btnLogout" type="submit" ng-click="goHome()" ng-show="loggedIn">Close</button>
   </div>
   <div ng-controller="registerLogInLogOut" class="styling">
-      <input type="text" ng-model="newPassword">
+      <input type="text" ng-model="newPassword"><br><br>
       <button type="submit" ng-click="changePassword()">Change Password</button>
-  </div>
+  </div><br>
   <div ng-controller="addTwilioNumber" class="styling">
       <input type="text" ng-model="newTwilioNumber">
       <button type="submit" ng-click="updateTwilioNumber()">Update Twilio Number</button>
-  </div>
+  </div><br>
   <div ng-controller="addPhoneNumber" class="styling">
       <input type="text" ng-model="newPhoneNumber">
       <button type="submit" ng-click="updatePhoneNumber()">Update Phone Number</button>
-  </div>
+  </div><br>
   <div ng-controller="searchMessages" class="styling">
       <input type="text" ng-model="newSearch">
       <button type="submit" ng-click="searchAllMessages(newSearch)">Search My Messages</button>
-  </div>
+  </div><br>
   <div id="sendMessages" class="styling">
       <input type="text" ng-model="message">
       <select ng-model="target">
           <option ng-repeat="currentUser in currentUsers">{{currentUser.email}}</option>
       </select>
       <button type="submit" ng-click="sendMessage()">Send</button>
-  </div>
+  </div><br>
   <div id="privateMessages" ng-controller="registerLogInLogOut" class="stylingList">
         <h4>Private Messages</h4>
 
