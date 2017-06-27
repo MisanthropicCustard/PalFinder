@@ -1,31 +1,33 @@
 <div id="img1">
-   <div>
+   <div >
       <button id="btnLogout" type="submit" ng-click="goHome()" ng-show="loggedIn">Close</button>
   </div>
-  <div ng-controller="registerLogInLogOut">
-      <input type="text" ng-model="newPassword">
+  <div ng-controller="registerLogInLogOut" class="styling">
+      <input type="text" ng-model="newPassword"><br><br>
       <button type="submit" ng-click="changePassword()">Change Password</button>
-  </div>
-  <div ng-controller="addTwilioNumber">
+  </div><br>
+  <div ng-controller="addTwilioNumber" class="styling">
       <input type="text" ng-model="newTwilioNumber">
       <button type="submit" ng-click="updateTwilioNumber()">Update Twilio Number</button>
-  </div>
-  <div ng-controller="addPhoneNumber">
+  </div><br>
+  <div ng-controller="addPhoneNumber" class="styling">
       <input type="text" ng-model="newPhoneNumber">
       <button type="submit" ng-click="updatePhoneNumber()">Update Phone Number</button>
-  </div>
-  <div ng-controller="searchMessages">
+  </div><br>
+  <div ng-controller="searchMessages" class="styling">
       <input type="text" ng-model="newSearch">
       <button type="submit" ng-click="searchAllMessages(newSearch)">Search My Messages</button>
-  </div>
-  <div id="sendMessages">
+  </div><br>
+  <div id="sendMessages" class="styling">
       <input type="text" ng-model="message">
       <select ng-model="target">
           <option ng-repeat="currentUser in currentUsers">{{currentUser.email}}</option>
       </select>
       <button type="submit" ng-click="sendMessage()">Send</button>
-  </div>
-  <div id="privateMessages" ng-controller="registerLogInLogOut">
+  </div><br>
+  <div id="privateMessages" ng-controller="registerLogInLogOut" class="stylingList">
+        <h4>Private Messages</h4>
+
       <ul>
           <li ng-repeat="messageObj in privateMessages">{{messageObj.sender}} : {{messageObj.message}}</li>
       </ul>
@@ -34,7 +36,7 @@
         <li ng-if="message.from"> {{message.from}} : {{message.body}}</li>
       </ul>
   </div>
-  <div ng-controller="searchMessages">
+  <div ng-controller="searchMessages" class="stylingList">
       <h4>Chat Search Results</h4>
       <ul>
           <li ng-repeat="chatMess in chatMessage">{{chatMess.username}} : {{chatMess.text}}</li>
